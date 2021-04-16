@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="1479.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <GridPane prefHeight="652.0" prefWidth="1443.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1117.0" minWidth="10.0" prefWidth="999.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="537.0" minWidth="10.0" prefWidth="478.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <top>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0 Products Found:" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+               </top>
+               <center>
+                  <TableView prefHeight="635.0" prefWidth="739.0" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="ProductID" />
+                      <TableColumn prefWidth="75.0" text="UPC" />
+                        <TableColumn prefWidth="75.0" text="Name" />
+                        <TableColumn prefWidth="75.0" text="Section" />
+                        <TableColumn prefWidth="75.0" text="Type" />
+                        <TableColumn prefWidth="75.0" text="BrandName" />
+                        <TableColumn prefWidth="75.0" text="ProductLine" />
+                        <TableColumn prefWidth="75.0" text="Weight" />
+                        <TableColumn prefWidth="75.0" text="Length" />
+                        <TableColumn prefWidth="75.0" text="Width" />
+                        <TableColumn prefWidth="75.0" text="Height" />
+                        <TableColumn prefWidth="75.0" text="Capacity" />
+                        <TableColumn prefWidth="96.0" text="IsRefrigerated" />
+                    </columns>
+                  </TableView>
+               </center>
+            </BorderPane>
+            <BorderPane prefHeight="651.0" prefWidth="435.0" GridPane.columnIndex="1">
+               <top>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0 Stores Found:" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+               </top>
+               <center>
+                  <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn prefWidth="101.0" text="StoreID" />
+                      <TableColumn prefWidth="100.0" text="Address_Street" />
+                        <TableColumn prefWidth="94.0" text="Address_City" />
+                        <TableColumn prefWidth="104.0" text="Address_State" />
+                        <TableColumn prefWidth="78.0" text="Address_ZIP" />
+                    </columns>
+                  </TableView>
+               </center>
+            </BorderPane>
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField maxWidth="1.7976931348623157E308" GridPane.columnIndex="4" />
+            <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="AmountInStock " GridPane.columnIndex="3">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="New Search" />
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Return to Menu" GridPane.columnIndex="1" />
+            <Button layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Delete" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+   </bottom>
+</BorderPane>
