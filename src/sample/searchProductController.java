@@ -16,7 +16,7 @@ import java.io.IOException;
 
 public class searchProductController {
     @FXML
-    private TextField upcText, nameText, sectionText, typeText, brandNameText, productLineText, weightText, lengthText, widthText, heightText, capacityText;
+    private TextField upcText, nameText, sectionText, typeText, brandNameText, productLineText, weightMinText, weightMaxText, lengthMinText, lengthMaxText, widthMinText, widthMaxText, heightMinText, heightMaxText, capacityMinText, capacityMaxText;
     @FXML
     private Button cancelBtn, searchBtn;
     @FXML

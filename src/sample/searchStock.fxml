@@ -140,16 +140,110 @@
             <TextField fx:id="typeText" layoutX="201.0" layoutY="138.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <TextField fx:id="brandNameText" layoutX="201.0" layoutY="178.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <TextField fx:id="productLineText" layoutX="201.0" layoutY="218.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <TextField fx:id="weightText" layoutX="201.0" layoutY="258.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-            <TextField fx:id="lengthText" layoutX="201.0" layoutY="298.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-            <TextField fx:id="widthText" layoutX="201.0" layoutY="338.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-            <TextField fx:id="heightText" layoutX="201.0" layoutY="378.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-            <TextField fx:id="capacityText" layoutX="201.0" layoutY="418.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="11" />
             <TextField fx:id="streetText" layoutX="201.0" layoutY="58.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.rowIndex="1" />
             <TextField fx:id="cityText" layoutX="201.0" layoutY="58.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.rowIndex="2" />
             <TextField fx:id="stateText" layoutX="201.0" layoutY="58.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.rowIndex="3" />
             <TextField fx:id="zipText" layoutX="201.0" layoutY="58.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.rowIndex="4" />
             <CheckBox fx:id="refrigeratedCBox" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="7">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.0" minWidth="10.0" prefWidth="90.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="40.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="90.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="to" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font></Label>
+                  <TextField />
+                  <TextField fx:id="weightMinText" layoutX="10.0" layoutY="12.0" />
+                  <TextField fx:id="weightMaxText" layoutX="10.0" layoutY="12.0" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="216.0" layoutY="213.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.0" minWidth="10.0" prefWidth="90.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="40.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="90.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="to" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField />
+                  <TextField fx:id="lengthMinText" layoutX="10.0" layoutY="12.0" />
+                  <TextField fx:id="lengthMaxText" layoutX="10.0" layoutY="12.0" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="216.0" layoutY="242.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.0" minWidth="10.0" prefWidth="90.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="40.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="90.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="to" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField />
+                  <TextField fx:id="widthMinText" layoutX="10.0" layoutY="12.0" />
+                  <TextField fx:id="widthMaxText" layoutX="10.0" layoutY="12.0" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="216.0" layoutY="271.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.0" minWidth="10.0" prefWidth="90.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="40.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="90.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="to" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField />
+                  <TextField fx:id="heightMinText" layoutX="10.0" layoutY="12.0" />
+                  <TextField fx:id="heightMaxText" layoutX="10.0" layoutY="12.0" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="216.0" layoutY="300.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.0" minWidth="10.0" prefWidth="90.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="40.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="90.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="to" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField />
+                  <TextField fx:id="capacityMinText" layoutX="10.0" layoutY="12.0" />
+                  <TextField fx:id="capacityMaxText" layoutX="10.0" layoutY="12.0" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
          </children>
       </GridPane>
    </center>
