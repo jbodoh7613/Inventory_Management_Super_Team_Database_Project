@@ -31,7 +31,7 @@
          </font>
       </Label>
       <CheckBox fx:id="refrigeratedCBox" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="11" />
-      <Button fx:id="cancelBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cancelBtnHandler" text="Cancel" GridPane.rowIndex="12" />
+      <Button fx:id="cancelBtn" cancelButton="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cancelBtnHandler" text="Cancel" GridPane.rowIndex="12" />
       <TextField fx:id="upcText" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" />
       <TextField fx:id="nameText" layoutX="310.0" layoutY="13.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Button fx:id="searchBtn" layoutX="10.0" layoutY="380.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#searchBtnHandler" text="Search" GridPane.columnIndex="1" GridPane.rowIndex="12" />

@@ -22,7 +22,7 @@
             <Font name="Arial" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="cancelBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Cancel" GridPane.rowIndex="4" />
+      <Button fx:id="cancelBtn" cancelButton="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cancelBtnHandler" text="Cancel" GridPane.rowIndex="4" />
       <TextField fx:id="streetText" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" />
       <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="City " GridPane.rowIndex="1">
          <font>
@@ -42,6 +42,6 @@
       <TextField fx:id="cityText" layoutX="310.0" layoutY="38.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <TextField fx:id="stateText" layoutX="310.0" layoutY="118.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <TextField fx:id="zipText" layoutX="310.0" layoutY="198.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      <Button layoutX="10.0" layoutY="330.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Button layoutX="10.0" layoutY="330.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addBtnHandler" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="4" />
    </children>
 </GridPane>

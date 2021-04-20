@@ -23,7 +23,17 @@ public class searchProductController {
     private CheckBox refrigeratedCBox;
 
     public void cancelBtnHandler(ActionEvent e) {
-        System.out.println("cancelBtn clicked");
+        try {
+            Parent menu = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            Stage menuStage = new Stage();
+            menuStage.setScene(new Scene(menu, 350, 275));
+            menuStage.setTitle("Main Menu");
+            menuStage.show();
+        }
+        catch(IOException e928) {
+            e928.printStackTrace();
+        }
+        ((Node)(e.getSource())).getScene().getWindow().hide();
     }
     public void searchBtnHandler(ActionEvent e) {
         try {
@@ -31,6 +41,18 @@ public class searchProductController {
             Stage stage = new Stage();
             stage.setScene(new Scene(root, 946, 488));
             stage.setTitle("Product Results");
+            stage.setOnCloseRequest( el -> {
+                try {
+                    Parent menu = FXMLLoader.load(getClass().getResource("sample.fxml"));
+                    Stage menuStage = new Stage();
+                    menuStage.setScene(new Scene(menu, 350, 275));
+                    menuStage.setTitle("Main Menu");
+                    menuStage.show();
+                }
+                catch(IOException e928) {
+                    e928.printStackTrace();
+                }
+            });
             stage.show();
             ((Node)(e.getSource())).getScene().getWindow().hide();
         }
