@@ -17,14 +17,24 @@ import java.io.IOException;
 
 public class searchStockController {
     @FXML
-    private TextField upcText, nameText, sectionText, typeText, brandNameText, productLineText, weightText, lengthText, widthText, heightText, capacityText, streetText, cityText, stateText, zipText;
+    private TextField upcText, nameText, sectionText, typeText, brandNameText, productLineText, weightMinText, weightMaxText, lengthMinText, lengthMaxText, widthMinText, widthMaxText, heightMinText, heightMaxText, capacityMinText, capacityMaxText, streetText, cityText, stateText, zipText;
     @FXML
     private Button cancelBtn, searchBtn;
     @FXML
     private CheckBox refrigeratedCBox;
 
     public void cancelBtnHandler(ActionEvent e) {
-        System.out.println("cancelBtn clicked");
+        try {
+            Parent menu = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            Stage menuStage = new Stage();
+            menuStage.setScene(new Scene(menu, 350, 275));
+            menuStage.setTitle("Main Menu");
+            menuStage.show();
+        }
+        catch(IOException e928) {
+            e928.printStackTrace();
+        }
+        ((Node)(e.getSource())).getScene().getWindow().hide();
     }
     public void searchBtnHandler(ActionEvent e) {
         try {
@@ -32,6 +42,18 @@ public class searchStockController {
             Stage stage = new Stage();
             stage.setScene(new Scene(root, 1479, 488));
             stage.setTitle("Stock Results");
+            stage.setOnCloseRequest( el -> {
+                try {
+                    Parent menu = FXMLLoader.load(getClass().getResource("sample.fxml"));
+                    Stage menuStage = new Stage();
+                    menuStage.setScene(new Scene(menu, 350, 275));
+                    menuStage.setTitle("Main Menu");
+                    menuStage.show();
+                }
+                catch(IOException e928) {
+                    e928.printStackTrace();
+                }
+            });
             stage.show();
             ((Node)(e.getSource())).getScene().getWindow().hide();
         }

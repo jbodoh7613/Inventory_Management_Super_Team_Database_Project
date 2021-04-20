@@ -17,7 +17,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="returnBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Return to Menu" GridPane.rowIndex="1" />
+            <Button fx:id="returnBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#returnBtnHandler" text="Return to Menu" GridPane.rowIndex="1" />
             <Button fx:id="editBtn" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#editBtnHandler" text="Edit" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Button fx:id="deleteBtn" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Delete" GridPane.columnIndex="2" GridPane.rowIndex="1" />
          </children>

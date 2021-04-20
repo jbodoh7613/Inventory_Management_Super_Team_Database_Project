@@ -96,8 +96,8 @@
       <TextField fx:id="widthText" layoutX="216.0" layoutY="215.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
       <TextField fx:id="heightText" layoutX="216.0" layoutY="244.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
       <TextField fx:id="capacityText" layoutX="216.0" layoutY="273.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-      <Button fx:id="addBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="12" />
-      <Button fx:id="cancelBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cancelBtnHandler" text="Cancel" GridPane.rowIndex="12" />
+      <Button fx:id="addBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addBtnHandler" prefHeight="25.0" prefWidth="71.0" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+      <Button fx:id="cancelBtn" cancelButton="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cancelBtnHandler" text="Cancel" GridPane.rowIndex="12" />
       <CheckBox fx:id="refrigeratedCBox" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="11" />
    </children>
 </GridPane>
