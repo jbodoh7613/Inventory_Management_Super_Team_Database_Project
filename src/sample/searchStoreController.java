@@ -33,7 +33,12 @@ public class searchStoreController {
         ((Node)(e.getSource())).getScene().getWindow().hide();
     }
     public void searchBtnHandler(ActionEvent e) {
+        StoreRequest store = new StoreRequest(streetText.getText(), cityText.getText(), stateText.getText(), zipText.getText());
         try {
+            //FXMLLoader loader = new FXMLLoader(getClass().getResource("\\sample\\resultsStore.fxml"));
+            //Parent root = (Parent) loader.load();
+            //resultsStoreController resultsStoreController = loader.getController();
+            //resultsStoreController.sendStoreRequest(store);
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("\\sample\\resultsStore.fxml"));
             Stage stage = new Stage();
             stage.setScene(new Scene(root, 502, 488));

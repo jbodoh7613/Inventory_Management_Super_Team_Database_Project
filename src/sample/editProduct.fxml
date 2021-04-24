@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="411.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="411.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.editProductController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -25,23 +25,23 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <TextField maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" />
+      <TextField fx:id="upcText" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" />
       <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="UPC ">
          <font>
             <Font name="Arial" size="18.0" />
          </font></Label>
       <CheckBox mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="11" />
-      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Cancel" GridPane.rowIndex="12" />
-      <TextField layoutX="310.0" layoutY="13.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <TextField layoutX="310.0" layoutY="44.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button fx:id="cancelBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cancelBtnHandler" text="Cancel" GridPane.rowIndex="12" />
+      <TextField fx:id="nameText" layoutX="310.0" layoutY="13.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <TextField fx:id="sectionText" layoutX="310.0" layoutY="44.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <TextField layoutX="310.0" layoutY="75.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      <TextField layoutX="310.0" layoutY="106.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-      <TextField layoutX="310.0" layoutY="137.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-      <TextField layoutX="310.0" layoutY="168.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-      <TextField layoutX="310.0" layoutY="199.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-      <TextField layoutX="310.0" layoutY="230.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-      <TextField layoutX="310.0" layoutY="261.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-      <TextField layoutX="310.0" layoutY="292.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+      <TextField fx:id="brandNameText" layoutX="310.0" layoutY="106.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <TextField fx:id="productLineText" layoutX="310.0" layoutY="137.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <TextField fx:id="weightText" layoutX="310.0" layoutY="168.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <TextField fx:id="lengthText" layoutX="310.0" layoutY="199.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <TextField fx:id="widthText" layoutX="310.0" layoutY="230.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+      <TextField fx:id="heightText" layoutX="310.0" layoutY="261.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+      <TextField fx:id="capacityText" layoutX="310.0" layoutY="292.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="10" />
       <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Name " GridPane.rowIndex="1">
          <font>
             <Font name="Arial" size="18.0" />
@@ -97,6 +97,6 @@
             <Font name="Arial" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="10.0" layoutY="380.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Edit" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+      <Button fx:id="editBtn" layoutX="10.0" layoutY="380.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#editBtnHandler" text="Edit" GridPane.columnIndex="1" GridPane.rowIndex="12" />
    </children>
 </GridPane>

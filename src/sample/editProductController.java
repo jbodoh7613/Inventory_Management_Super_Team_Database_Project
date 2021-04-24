@@ -4,13 +4,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 
-public class  editStoreController {
+public class editProductController {
     @FXML
-    TextField streetText, cityText, stateText, zipText;
+    TextField upcText, nameText, sectionText, brandNameText, productLineText, weightText, lengthText, widthText, heightText, capacityText;
     @FXML
-    private Button cancelBtn, editBtn;
+    CheckBox refrigeratedCBox;
+    @FXML
+    Button cancelBtn, editBtn;
 
     public void cancelBtnHandler(ActionEvent e) {
         ((Node) (e.getSource())).getScene().getWindow().hide();

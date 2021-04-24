@@ -24,20 +24,20 @@
       </GridPane>
    </bottom>
    <center>
-      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="productTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn prefWidth="75.0" text="ProductID" />
-          <TableColumn prefWidth="75.0" text="UPC" />
-            <TableColumn prefWidth="75.0" text="Section" />
-            <TableColumn prefWidth="75.0" text="Type" />
-            <TableColumn prefWidth="75.0" text="BrandName" />
-            <TableColumn prefWidth="75.0" text="ProductLine" />
-            <TableColumn prefWidth="75.0" text="Weight" />
-            <TableColumn prefWidth="75.0" text="Length" />
-            <TableColumn prefWidth="75.0" text="Width" />
-            <TableColumn prefWidth="75.0" text="Height" />
-            <TableColumn prefWidth="75.0" text="Capacity" />
-            <TableColumn prefWidth="119.0" text="IsRefrigerated" />
+          <TableColumn fx:id="productIdCol" editable="false" prefWidth="75.0" text="ProductID" />
+          <TableColumn fx:id="upcCol" editable="false" prefWidth="75.0" text="UPC" />
+            <TableColumn fx:id="sectionCol" editable="false" prefWidth="75.0" text="Section" />
+            <TableColumn fx:id="typeCol" editable="false" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="brandNameCol" editable="false" prefWidth="75.0" text="BrandName" />
+            <TableColumn fx:id="productLineCol" editable="false" prefWidth="75.0" text="ProductLine" />
+            <TableColumn fx:id="weightCol" editable="false" prefWidth="75.0" text="Weight" />
+            <TableColumn fx:id="lengthCol" editable="false" prefWidth="75.0" text="Length" />
+            <TableColumn fx:id="widthCol" editable="false" prefWidth="75.0" text="Width" />
+            <TableColumn fx:id="heightCol" editable="false" prefWidth="75.0" text="Height" />
+            <TableColumn fx:id="capacityCol" editable="false" prefWidth="75.0" text="Capacity" />
+            <TableColumn fx:id="refrigeratedCol" editable="false" prefWidth="119.0" text="IsRefrigerated" />
         </columns>
       </TableView>
    </center>

@@ -23,13 +23,13 @@
       </GridPane>
    </bottom>
    <center>
-      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="storeTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn prefWidth="75.0" text="StoreID" />
-          <TableColumn prefWidth="113.0" text="Address_Street" />
-            <TableColumn prefWidth="104.0" text="Address_City" />
-            <TableColumn prefWidth="108.0" text="Address_State" />
-            <TableColumn prefWidth="110.0" text="Address_ZIP" />
+          <TableColumn fx:id="storeIdCol" editable="false" prefWidth="75.0" text="StoreID" />
+          <TableColumn fx:id="streetCol" editable="false" prefWidth="113.0" text="Address_Street" />
+            <TableColumn fx:id="cityCol" editable="false" prefWidth="104.0" text="Address_City" />
+            <TableColumn fx:id="stateCol" editable="false" prefWidth="108.0" text="Address_State" />
+            <TableColumn fx:id="zipCol" editable="false" prefWidth="110.0" text="Address_ZIP" />
         </columns>
       </TableView>
    </center>

@@ -1,5 +1,7 @@
 package sample;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,22 +9,35 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class resultsStoreController {
+    private StoreRequest storeRequest;
+    private ObservableList<Store> storeList;
+
     @FXML
     private Button returnBtn, editBtn, deleteBtn;
+    @FXML
+    private TableView<Store> storeTableView;
+    @FXML
+    private TableColumn<Store, Integer> storeIdCol;
+    @FXML
+    private TableColumn<Store, String> streetCol, cityCol, stateCol, zipCol;
 
     public void editButtonHandler(ActionEvent e) {
         try {
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("\\sample\\editStore.fxml"));
             Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
             stage.setScene(new Scene(root, 411, 153));
             stage.setTitle("Edit Store");
             stage.show();
-            ((Node)(e.getSource())).getScene().getWindow().hide();
         }
         catch (IOException ei) {
             ei.printStackTrace();
@@ -40,5 +55,20 @@ public class resultsStoreController {
             e928.printStackTrace();
         }
         ((Node)(e.getSource())).getScene().getWindow().hide();
+    }
+    public void sendStoreRequest(StoreRequest storeRequest) {
+        this.storeRequest = storeRequest;
+    }
+    public void initialize() {
+        storeList = FXCollections.observableArrayList();
+        storeList.add(new Store(1, "a", "a", "a", "11111"));
+        storeIdCol.setCellValueFactory(new PropertyValueFactory<>("storeId"));
+        streetCol.setCellValueFactory(new PropertyValueFactory<>("street"));
+        cityCol.setCellValueFactory(new PropertyValueFactory<>("city"));
+        stateCol.setCellValueFactory(new PropertyValueFactory<>("state"));
+        zipCol.setCellValueFactory(new PropertyValueFactory<>("zip"));
+        storeTableView.setItems(storeList);
+        //storeTableView.getColumns().addAll(storeIdCol, streetCol, cityCol, stateCol, zipCol);
+        //System.out.printf("%s %s %s %s\n", storeRequest.getStreet(), storeRequest.getCity(), storeRequest.getState(), storeRequest.getZip());
     }
 }
