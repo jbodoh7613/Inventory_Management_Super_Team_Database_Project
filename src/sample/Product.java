@@ -1,11 +1,11 @@
 package sample;
 
 public class Product {
-    String upc, prodName, section, type, brandName, productLine;
+    String prodName, section, type, brandName, productLine;
     double weight, length, width, height;
-    int storeId, capacity;
+    int productId, upc, capacity;
     boolean isRefrigerated;
-    Product(int storeId, String upc, String prodName, String section, String type, String brandName, String productLine, double weight, double length, double width, double height, int capacity, boolean isRefrigerated) {
+    Product(int storeId, int upc, String prodName, String section, String type, String brandName, String productLine, double weight, double length, double width, double height, int capacity, boolean isRefrigerated) {
         this.upc = upc;
         this.prodName = prodName;
         this.section = section;
@@ -20,16 +20,16 @@ public class Product {
         this.isRefrigerated = isRefrigerated;
     }
 
-    public int getStoreId() {
-        return storeId;
+    public int getProductId() {
+        return productId;
     }
-    public void setStoreId() {
-        this.storeId = storeId;
+    public void setProductId() {
+        this.productId = productId;
     }
-    public String getUpc() {
+    public int getUpc() {
         return upc;
     }
-    public void setUpc(String upc) {
+    public void setUpc(int upc) {
         this.upc = upc;
     }
     public String getProdName() {

@@ -12,9 +12,11 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 
 public class searchProductController {
+    private SQLSearcher searcher;
     @FXML
     private TextField upcText, nameText, sectionText, typeText, brandNameText, productLineText, weightMinText, weightMaxText, lengthMinText, lengthMaxText, widthMinText, widthMaxText, heightMinText, heightMaxText, capacityMinText, capacityMaxText;
     @FXML
@@ -36,8 +38,25 @@ public class searchProductController {
         ((Node)(e.getSource())).getScene().getWindow().hide();
     }
     public void searchBtnHandler(ActionEvent e) {
+        ProductRequest product = new ProductRequest(upcText.getText(), nameText.getText(), sectionText.getText(), typeText.getText(), brandNameText.getText(), productLineText.getText(), weightMinText.getText(), weightMaxText.getText(), lengthMinText.getText(), lengthMaxText.getText(), widthMinText.getText(), widthMaxText.getText(), heightMinText.getText(), heightMaxText.getText(), capacityMinText.getText(), capacityMaxText.getText(), refrigeratedCBox.isSelected());
         try {
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("\\sample\\resultsProduct.fxml"));
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("/sample/resultsProduct.fxml"));
+            Parent root = (Parent) loader.load();
+            resultsProductController resultsProductController = loader.getController();
+            try {
+                searcher = new SQLSearcher("jdbc:sqlite:C:/Users/John/IdeaProjects/Inventory Management Super Team Database Project/project_database.db");
+            }
+            catch(SQLException es) {
+                es.printStackTrace();
+            }
+            catch(ClassNotFoundException ec) {
+                ec.printStackTrace();
+            }
+            resultsProductController.setProductRequest(product);
+            resultsProductController.setSQLSearcher(searcher);
+            resultsProductController.initTable();
+            //Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("/sample/resultsProduct.fxml"));
             Stage stage = new Stage();
             stage.setScene(new Scene(root, 946, 488));
             stage.setTitle("Product Results");

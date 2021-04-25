@@ -1,11 +1,11 @@
 package sample;
 
 public class ProductRequest {
-    private String upc, name, section, type, brandName, productLine, weight, length, width, height, capacity;
+    private String upc, name, section, type, brandName, productLine, weightMin, weightMax, lengthMin, lengthMax, widthMin, widthMax, heightMin, heightMax, capacityMin, capacityMax;
     private boolean isRefrigerated;
 
     // Any unused fields are passed as blank strings
-    public ProductRequest(String upc, String name, String section, String type, String brandName, String productLine, String weight, String length, String width, String height, String capacity, Boolean isRefrigerated) {
+    public ProductRequest(String upc, String name, String section, String type, String brandName, String productLine, String weightMin, String weightMax, String lengthMin, String lengthMax, String widthMin, String widthMax, String heightMin, String heightMax, String capacityMin, String capacityMax, Boolean isRefrigerated) {
         this.upc = upc;
         this.name = name;
         this.section = section;
@@ -13,11 +13,16 @@ public class ProductRequest {
         this.type = type;
         this.brandName = brandName;
         this.productLine = productLine;
-        this.weight = weight;
-        this.length = length;
-        this.width = width;
-        this.height = height;
-        this.capacity = capacity;
+        this.weightMin = weightMin;
+        this.weightMax = weightMax;
+        this.lengthMin = lengthMin;
+        this.lengthMax = lengthMax;
+        this.widthMin = widthMin;
+        this.widthMax = widthMax;
+        this.heightMin = heightMin;
+        this.heightMax = heightMax;
+        this.capacityMin = capacityMin;
+        this.capacityMax = capacityMin;
         this.isRefrigerated = isRefrigerated;
     }
     public String getUpc() {
@@ -38,22 +43,29 @@ public class ProductRequest {
     public String getProductLine() {
         return productLine;
     }
-    public String getWeight() {
-        return weight;
+    public String getWeightMin() {
+        return weightMin;
     }
-    public String getLength() {
-        return length;
+    public String getWeightMax() { return weightMax; }
+    public String getLengthMin() {
+        return lengthMin;
     }
-    public String getWidth() {
-        return width;
+    public String getLengthMax() { return lengthMax; }
+    public String getWidthMin() {
+        return widthMin;
     }
-    public String getHeight() {
-        return height;
+    public String getWidthMax() { return widthMax; }
+    public String getHeightMin() {
+        return heightMin;
     }
-    public String capacity() {
-        return capacity();
+    public String getHeightMax() { return heightMax; }
+    public String getCapacityMin() {
+        return capacityMin;
     }
-    public Boolean getRefrigerated() {
+    public String getCapacityMax() {
+        return capacityMax;
+    }
+    public Boolean isRefrigerated() {
         return isRefrigerated;
     }
 }

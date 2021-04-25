@@ -16,10 +16,13 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
 
 public class resultsStoreController {
-    private StoreRequest storeRequest;
     private ObservableList<Store> storeList;
+    private SQLSearcher searcher;
+    private StoreRequest storeRequest;
 
     @FXML
     private Button returnBtn, editBtn, deleteBtn;
@@ -30,6 +33,26 @@ public class resultsStoreController {
     @FXML
     private TableColumn<Store, String> streetCol, cityCol, stateCol, zipCol;
 
+    public void setStoreRequest(StoreRequest storeRequest) {
+        this.storeRequest = storeRequest;
+    }
+    public void setSQLSearcher(SQLSearcher searcher) {
+        this.searcher = searcher;
+    }
+    public void initTable() {
+        try  {
+            storeList = FXCollections.observableArrayList(searcher.searchStore(storeRequest));
+            storeIdCol.setCellValueFactory(new PropertyValueFactory<>("storeId"));
+            streetCol.setCellValueFactory(new PropertyValueFactory<>("street"));
+            cityCol.setCellValueFactory(new PropertyValueFactory<>("city"));
+            stateCol.setCellValueFactory(new PropertyValueFactory<>("state"));
+            zipCol.setCellValueFactory(new PropertyValueFactory<>("zip"));
+            storeTableView.setItems(storeList);
+        }
+        catch(SQLException e) {
+            e.printStackTrace();
+        }
+    }
     public void editButtonHandler(ActionEvent e) {
         try {
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("\\sample\\editStore.fxml"));
@@ -56,10 +79,7 @@ public class resultsStoreController {
         }
         ((Node)(e.getSource())).getScene().getWindow().hide();
     }
-    public void sendStoreRequest(StoreRequest storeRequest) {
-        this.storeRequest = storeRequest;
-    }
-    public void initialize() {
+    /* public void initialize() {
         storeList = FXCollections.observableArrayList();
         storeList.add(new Store(1, "a", "a", "a", "11111"));
         storeIdCol.setCellValueFactory(new PropertyValueFactory<>("storeId"));
@@ -70,5 +90,5 @@ public class resultsStoreController {
         storeTableView.setItems(storeList);
         //storeTableView.getColumns().addAll(storeIdCol, streetCol, cityCol, stateCol, zipCol);
         //System.out.printf("%s %s %s %s\n", storeRequest.getStreet(), storeRequest.getCity(), storeRequest.getState(), storeRequest.getZip());
-    }
+    } */
 }
